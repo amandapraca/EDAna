@@ -1,0 +1,9 @@
+Lista de bibliotecas usadas
+
+streamlit
+pandas
+matplotlib
+seaborn
+scikit-learn
+numpy
+
