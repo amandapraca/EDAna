@@ -1,9 +1,12 @@
+## 📦 requirements.txt 
+
 Lista de bibliotecas usadas
 
+```txt
 streamlit
 pandas
 matplotlib
 seaborn
 scikit-learn
 numpy
-
+python-dotenv
