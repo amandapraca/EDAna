@@ -28,3 +28,9 @@ Este projeto foi desenvolvido como parte da atividade extra da disciplina de Age
 1. Clone este repositório:
    ```bash
    git clone https://github.com/seu-usuario/agente-eda-amanda.git
+
+## 🌐 Acesso online
+
+Você pode acessar o agente diretamente pelo link abaixo:
+
+🔗 [https://agente-eda-amanda.streamlit.app](https://agente-eda-amanda.streamlit.app)
