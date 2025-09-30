@@ -29,6 +29,12 @@ def gerar_resposta_llm(pergunta: str, df: pd.DataFrame) -> str:
         model = genai.GenerativeModel("gemini-pro-latest")
         resumo_dados = gerar_resumo_dos_dados(df)
 
+        # Detecta se o usuário pediu uma resposta curta
+        if "(resposta curta)" in pergunta.lower():
+            estilo_instrucao = "- Responda de forma direta, objetiva e concisa. Use frases curtas e vá direto ao ponto."
+        else:
+            estilo_instrucao = "- Seja técnico, claro e forneça uma resposta equilibrada: nem muito longa, nem muito curta."
+
         prompt = f"""
 Você é um agente autônomo de análise de dados. Seu papel é responder perguntas com base nos dados abaixo, que foram extraídos de um arquivo CSV.
 
@@ -36,7 +42,7 @@ Regras:
 - Responda com base exclusivamente nos dados.
 - Não invente informações.
 - Se não for possível responder, diga: "Os dados não permitem responder essa pergunta."
-- Seja técnico, claro e completo.
+{estilo_instrucao}
 - Use exemplos, estatísticas e comparações quando necessário.
 
 Resumo dos dados:
