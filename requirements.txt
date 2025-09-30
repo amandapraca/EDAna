@@ -1,12 +1,8 @@
-## 📦 requirements.txt 
-
-Lista de bibliotecas usadas
-
 streamlit
 pandas
+numpy
 matplotlib
 seaborn
 scikit-learn
-numpy
 python-dotenv
 google-generativeai
