@@ -68,10 +68,13 @@ if st.button("📁 Usar novo arquivo"):
 if st.session_state['df'] is None:
     st.markdown("## 👋 Bem-vindos ao agente EDAna!")
     st.markdown("""
-    EDAna é sua especialista em análise exploratória de dados.  
-    Faça upload de um arquivo CSV e me pergunte qualquer coisa sobre os dados.  
-    Posso gerar gráficos, detectar padrões, encontrar outliers e muito mais!  
-    """)
+EDAna é sua especialista em análise exploratória de dados.  
+Faça upload de um arquivo CSV e me pergunte qualquer coisa sobre os dados.  
+Posso gerar gráficos, detectar padrões, encontrar outliers e muito mais!  
+
+🗣️ Por padrão, EDAna responde com explicações técnicas e completas.  
+Se preferir uma resposta mais direta e objetiva, adicione **(resposta curta)** ao final da sua pergunta.
+""")
 
     arquivo = st.file_uploader("Faça upload de um arquivo CSV", type=["csv"])
     if arquivo is not None:
